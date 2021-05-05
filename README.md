@@ -2,3 +2,6 @@
 
 - GitHub
   - [ghmagazine](https://github.com/ghmagazine/rustbook)
+
+- Doc
+  - [StandardLibrary](https://doc.rust-lang.org/stable/std/)
