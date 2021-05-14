@@ -52,7 +52,6 @@ impl<T: Default> ToyVec<T> {
         self.len += 1;
     }
 
-    // elementsを拡張する（より大きなサイズで作り直す）
     // 第一引数が`&self`なので、`ToyVec`は変更されない
     // 第二引数が`usize`なので、値がコピーされる(`usize`にはコピートレイトが実装されている)
     pub fn get(&self, index: usize) -> Option<&T> {
@@ -66,6 +65,7 @@ impl<T: Default> ToyVec<T> {
         }
     }
 
+    // elementsを拡張する（より大きなサイズで作り直す）
     pub fn grow(&mut self) {
         // もし、現在の`elements`が空なら
         if self.capacity() == 0 {
@@ -84,5 +84,4 @@ impl<T: Default> ToyVec<T> {
             }
         }
     }
-
 }
